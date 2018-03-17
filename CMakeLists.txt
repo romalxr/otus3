@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.2.2)
 
 if (NOT "$ENV{TRAVIS_BUILD_NUMBER}" STREQUAL "")
-    project(ip_filter VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
+    project(allocator VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 else()
-    project(ip_filter VERSION 0.0.1)
+    project(allocator VERSION 0.0.1)
 endif()
 
 set(CMAKE_CXX_STANDARD 14)
