@@ -11,7 +11,6 @@ set(CMAKE_CXX_STANDARD 14)
 add_executable(allocator allocator.cpp)
 
 install(TARGETS allocator RUNTIME DESTINATION bin)
-
 set(CPACK_GENERATOR DEB)
 
 set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
