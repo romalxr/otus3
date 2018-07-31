@@ -31,7 +31,6 @@ public:
         ++total;
         if(total>num_elems)
         {
-            free(head);
             throw std::bad_alloc();
         }
         return p++;

@@ -30,12 +30,19 @@ int main(int argc, char **argv)
     }
 
     MyContainer<int> dc;
-    MyContainer<int, MyAlloc<std::pair<int,int>,10> > c;
+    MyContainer<int, MyAlloc<int,10> > c;
 
-    for(int i=0; i<10;++i)
+    for(int i=0; i<11;++i)
     {
-        dc.push_back(i+1);
-        c.push_back(i+1);
+        try
+        {
+            dc.push_back(i+1);
+            c.push_back(i+1);
+        }
+        catch (std::bad_alloc)
+        {
+            std::cerr << "bad_alloc";
+        }
     }
 
     for(const auto& i : c)
